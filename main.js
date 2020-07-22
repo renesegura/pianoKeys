@@ -26,7 +26,6 @@ let eventAssignment = function (note) {
 // assigns notes array with mouse down/up keyplay event
 notes.forEach(eventAssignment);
 
-
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
 let nextTwo = document.getElementById('second-next-line');
@@ -42,9 +41,20 @@ nextThree.hidden = true;
 startOver.hidden = true;
 
 // Write anonymous event handler property and function for the first progress button
-
+nextOne.onclick = function() {
+  nextOne.hidden = true;
+  nextTwo.hidden = false;
+  document.getElementById('letter-note-five').innerHTML = 'D';
+  document.getElementById('letter-note-six').innerHTML = 'C';
+}
 
 // Write anonymous event handler property and function for the second progress button
+nextTwo.onclick = function() {
+  nextTwo.hidden = true;
+  nextThree.hidden = false;
+  document.getElementById('word-five').innerHTML = 'DEAR';
+  document.getElementById('word-six').innerHTML = 'FRI-'
+}
 
 
 // Write anonymous event handler property and function for the third progress button
